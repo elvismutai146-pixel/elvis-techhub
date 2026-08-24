@@ -1,11 +1,4 @@
-/* =========================================================
-   ELVIS TECH HUB
-   MAIN WEBSITE STYLESHEET
-========================================================= */
 
-/* =========================
-   RESET
-========================= */
 
 * {
     margin: 0;
@@ -1958,3 +1951,78 @@ button {
     }
 
 }
+/* =====================================
+   ELVIS PROFILE
+===================================== */
+
+.my-profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin: 30px 0;
+
+    padding: 15px;
+
+    background: #f5f8fc;
+
+    border-radius: 15px;
+
+    max-width: 500px;
+}
+
+
+.my-profile-photo {
+
+    width: 75px;
+
+    height: 75px;
+
+    min-width: 75px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 4px solid #0066ff;
+
+}
+
+
+.my-profile-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.my-profile-info h3 {
+
+    margin: 0 0 5px;
+
+    color: #08111f;
+
+    font-size: 19px;
+
+}
+
+
+.my-profile-info span {
+
+    color: #687584;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+   
