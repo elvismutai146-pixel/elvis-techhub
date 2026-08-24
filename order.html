@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Place an order with Elvis Tech Hub for printing, graphic design, computer and digital services.">
+
+    <title>Place an Order | Elvis Tech Hub</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        /* =====================================================
+           ORDER PAGE
+        ===================================================== */
+
+        .order-hero {
+            background:
+                linear-gradient(
+                    120deg,
+                    #071426,
+                    #0c315c
+                );
+
+            color: white;
+            text-align: center;
+
+            padding: 90px 20px;
+        }
+
+        .order-hero .section-label {
+            color: #00c6ff;
+        }
+
+        .order-hero h1 {
+            font-size: clamp(40px, 6vw, 65px);
+            margin-bottom: 15px;
+        }
+
+        .order-hero h1 span {
+            color: #00c6ff;
+        }
+
+        .order-hero p {
+            max-width: 700px;
+            margin: auto;
+
+            color: #c8d5e3;
+        }
+
+
+        /* =====================================================
+           ORDER AREA
+        ===================================================== */
+
+        .order-section {
+            padding: 80px 20px;
+
+            background: #f5f8fc;
+        }
+
+        .order-container {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 0.8fr;
+
+            gap: 35px;
+        }
+
+
+        /* =====================================================
+           FORM
+        ===================================================== */
+
+        .order-form-box {
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 18px;
+
+            border: 1px solid #e3e8ef;
+
+            box-shadow:
+                0 15px 40px
+                rgba(0,0,0,0.06);
+        }
+
+        .order-form-box h2 {
+
+            font-size: 28px;
+
+            margin-bottom: 8px;
+
+            color: #08111f;
+        }
+
+        .order-form-box > p {
+
+            color: #697685;
+
+            margin-bottom: 30px;
+        }
+
+
+        .form-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 20px;
+        }
+
+
+        .form-group {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
+        }
+
+
+        .form-group.full {
+
+            grid-column:
+                1 / -1;
+        }
+
+
+        .form-group label {
+
+            font-weight: 600;
+
+            color: #273444;
+
+            font-size: 14px;
+        }
+
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+
+            width: 100%;
+
+            padding: 14px 15px;
+
+            border: 1px solid #d8e0e8;
+
+            border-radius: 9px;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            outline: none;
+
+            transition: 0.3s;
+        }
+
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+
+            border-color: #0066ff;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(0,102,255,0.08);
+        }
+
+
+        .form-group textarea {
+
+            min-height: 130px;
+
+            resize: vertical;
+        }
+
+
+        /* FILE UPLOAD */
+
+        .file-upload {
+
+            border: 2px dashed #cbd6e2;
+
+            border-radius: 10px;
+
+            padding: 25px;
+
+            text-align: center;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        .file-upload:hover {
+
+            border-color: #0066ff;
+
+            background:
+                rgba(0,102,255,0.03);
+        }
+
+
+        .file-upload i {
+
+            font-size: 30px;
+
+            color: #0066ff;
+
+            margin-bottom: 10px;
+        }
+
+
+        .file-upload span {
+
+            display: block;
+
+            color: #5e6b79;
+
+            font-size: 13px;
+        }
+
+
+        .file-upload input {
+
+            margin-top: 12px;
+
+            border: none;
+
+            padding: 0;
+        }
+
+
+        /* CHECKBOX */
+
+        .agreement {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 10px;
+
+            margin: 20px 0;
+
+            font-size: 13px;
+
+            color: #657281;
+        }
+
+
+        .agreement input {
+
+            margin-top: 3px;
+        }
+
+
+        /* SUBMIT */
+
+        .submit-order {
+
+            width: 100%;
+
+            padding: 16px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            background: #0066ff;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        .submit-order:hover {
+
+            background: #0052cc;
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =====================================================
+           ORDER SUMMARY
+        ===================================================== */
+
+        .order-summary {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #071426,
+                    #0d3157
+                );
+
+            color: white;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            height: fit-content;
+
+            position: sticky;
+
+            top: 100px;
+        }
+
+
+        .order-summary h2 {
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .order-summary > p {
+
+            color: #b8c7d6;
+
+            font-size: 14px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .summary-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 15px 0;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.1);
+        }
+
+
+        .summary-item i {
+
+            width: 42px;
+
+            height: 42px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 9px;
+
+            background:
+                rgba(255,255,255,0.08);
+
+            color: #00c6ff;
+        }
+
+
+        .summary-item h3 {
+
+            font-size: 15px;
+
+            margin-bottom: 4px;
+        }
+
+
+        .summary-item span {
+
+            font-size: 12px;
+
+            color: #aebdcc;
+        }
+
+
+        .whatsapp-order {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            width: 100%;
+
+            margin-top: 25px;
+
+            padding: 14px;
+
+            border-radius: 8px;
+
+            background: #25D366;
+
+            color: white;
+
+            font-weight: bold;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+
+        .whatsapp-order:hover {
+
+            transform:
+                translateY(-2px);
+
+            background: #20bd5a;
+        }
+
+
+        /* SUCCESS */
+
+        .success-message {
+
+            display: none;
+
+            margin-top: 20px;
+
+            padding: 15px;
+
+            border-radius: 8px;
+
+            background: #dcfce7;
+
+            color: #166534;
+
+            font-size: 14px;
+
+        }
+
+
+        .success-message.show {
+
+            display: block;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .order-container {
+
+                grid-template-columns: 1fr;
+            }
+
+            .order-summary {
+
+                position: static;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .order-form-box {
+
+                padding: 25px 20px;
+            }
+
+            .form-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+
+                grid-column: auto;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+
+    <div class="top-container">
+
+        <div class="top-left">
+
+            <span>
+
+                <i class="fas fa-phone"></i>
+
+                +254 727 374 133
+
+            </span>
+
+
+            <span>
+
+                <i class="fas fa-envelope"></i>
+
+                info@elvis-techhub.com
+
+            </span>
+
+        </div>
+
+
+        <div class="top-right">
+
+            <a href="#">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+
+        <a href="index.html"
+           class="logo">
+
+            <div class="logo-icon">
+
+                <i class="fas fa-laptop-code"></i>
+
+            </div>
+
+
+            <div class="logo-text">
+
+                <h2>ELVIS</h2>
+
+                <span>TECH HUB</span>
+
+            </div>
+
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="pricing.html">
+                    Pricing
+                </a>
+            </li>
+
+            <li>
+                <a href="order.html"
+                   class="active">
+                    Order
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="portfolio.html">
+                    Portfolio
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <a href="contact.html"
+           class="nav-button">
+
+            Contact Us
+
+            <i class="fas fa-arrow-right"></i>
+
+        </a>
+
+
+        <button class="menu-btn"
+                id="menuBtn">
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="order-hero">
+
+    <span class="section-label">
+        GET STARTED
+    </span>
+
+
+    <h1>
+
+        Place Your
+        <span>Order</span>
+
+    </h1>
+
+
+    <p>
+
+        Tell us what you need and we'll get back to you
+        as soon as possible.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     ORDER SECTION
+===================================================== -->
+
+<section class="order-section">
+
+    <div class="order-container">
+
+
+        <!-- =================================================
+             FORM
+        ================================================== -->
+
+        <div class="order-form-box">
+
+            <h2>
+                Order Details
+            </h2>
+
+            <p>
+                Fill in the form below with your requirements.
+            </p>
+
+
+            <form id="orderForm">
+
+
+                <div class="form-grid">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="customerName">
+
+                            Full Name *
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="Enter your full name"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+
+                    <div class="form-group">
+
+                        <label for="phone">
+
+                            Phone Number *
+
+                        </label>
+
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="07XXXXXXXX"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+
+                            Email Address
+
+                        </label>
+
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="you@example.com">
+
+                    </div>
+
+
+
+                    <!-- SERVICE -->
+
+                    <div class="form-group">
+
+                        <label for="orderService">
+
+                            Service *
+
+                        </label>
+
+
+                        <select
+                            id="orderService"
+                            required>
+
+                            <option value="">
+
+                                Select a service
+
+                            </option>
+
+                            <option>
+                                Printing
+                            </option>
+
+                            <option>
+                                Photocopying
+                            </option>
+
+                            <option>
+                                Scanning
+                            </option>
+
+                            <option>
+                                CV / Resume
+                            </option>
+
+                            <option>
+                                Poster Design
+                            </option>
+
+                            <option>
+                                Logo Design
+                            </option>
+
+                            <option>
+                                Business Card
+                            </option>
+
+                            <option>
+                                Passport Photo
+                            </option>
+
+                            <option>
+                                Computer Repair
+                            </option>
+
+                            <option>
+                                Windows Installation
+                            </option>
+
+                            <option>
+                                Software Installation
+                            </option>
+
+                            <option>
+                                Website Development
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- QUANTITY -->
+
+                    <div class="form-group">
+
+                        <label for="quantity">
+
+                            Quantity
+
+                        </label>
+
+
+                        <input
+                            type="number"
+                            id="quantity"
+                            min="1"
+                            value="1">
+
+                    </div>
+
+
+
+                    <!-- DEADLINE -->
+
+                    <div class="form-group">
+
+                        <label for="deadline">
+
+                            Preferred Deadline
+
+                        </label>
+
+
+                        <input
+                            type="date"
+                            id="deadline">
+
+                    </div>
+
+
+
+                    <!-- FILE -->
+
+                    <div class="form-group full">
+
+                        <label>
+
+                            Upload File
+
+                        </label>
+
+
+                        <div class="file-upload">
+
+                            <i class="fas fa-cloud-arrow-up"></i>
+
+
+                            <strong>
+
+                                Choose your file
+
+                            </strong>
+
+
+                            <span>
+
+                                PDF, Word, JPG, PNG or other
+                                relevant files
+
+                            </span>
+
+
+                            <input
+                                type="file"
+                                id="file">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MESSAGE -->
+
+                    <div class="form-group full">
+
+                        <label for="message">
+
+                            Additional Details *
+
+                        </label>
+
+
+                        <textarea
+                            id="message"
+                            placeholder="Describe exactly what you need..."
+                            required></textarea>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- AGREEMENT -->
+
+                <label class="agreement">
+
+                    <input
+                        type="checkbox"
+                        id="agreement"
+                        required>
+
+
+                    <span>
+
+                        I confirm that the information provided
+                        is correct and I agree to be contacted
+                        regarding my order.
+
+                    </span>
+
+                </label>
+
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="submit-order">
+
+                    <i class="fas fa-paper-plane"></i>
+
+                    Send Order via WhatsApp
+
+                </button>
+
+
+                <div
+                    class="success-message"
+                    id="successMessage">
+
+                    Your order details have been prepared.
+                    WhatsApp will open so you can send the
+                    order.
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SUMMARY
+        ================================================== -->
+
+        <aside class="order-summary">
+
+            <h2>
+                Why Order With Us?
+            </h2>
+
+
+            <p>
+                We provide reliable and professional
+                technology services.
+            </p>
+
+
+            <div class="summary-item">
+
+                <i class="fas fa-bolt"></i>
+
+                <div>
+
+                    <h3>
+                        Fast Service
+                    </h3>
+
+                    <span>
+                        Quick turnaround for most orders.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-item">
+
+                <i class="fas fa-shield-halved"></i>
+
+                <div>
+
+                    <h3>
+                        Reliable
+                    </h3>
+
+                    <span>
+                        Your work is handled professionally.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-item">
+
+                <i class="fas fa-tags"></i>
+
+                <div>
+
+                    <h3>
+                        Affordable
+                    </h3>
+
+                    <span>
+                        Competitive prices for quality work.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-item">
+
+                <i class="fas fa-headset"></i>
+
+                <div>
+
+                    <h3>
+                        Customer Support
+                    </h3>
+
+                    <span>
+                        We're available to assist you.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="https://wa.me/254727374133"
+                target="_blank"
+                class="whatsapp-order">
+
+                <i class="fab fa-whatsapp"></i>
+
+                Chat Directly on WhatsApp
+
+            </a>
+
+        </aside>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-about">
+
+            <div class="footer-logo">
+
+                <i class="fas fa-laptop-code"></i>
+
+                <div>
+
+                    <strong>ELVIS</strong>
+
+                    <span>TECH HUB</span>
+
+                </div>
+
+            </div>
+
+
+            <p>
+
+                Your trusted partner for computer services,
+                printing, cyber services, graphic design and
+                digital solutions.
+
+            </p>
+
+
+            <div class="social-links">
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="pricing.html">
+                Pricing
+            </a>
+
+            <a href="order.html">
+                Order
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Services
+            </h3>
+
+            <a href="services.html">
+                Printing
+            </a>
+
+            <a href="services.html">
+                Computer Services
+            </a>
+
+            <a href="services.html">
+                Graphic Design
+            </a>
+
+            <a href="services.html">
+                Cyber Services
+            </a>
+
+            <a href="services.html">
+                Web Development
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column contact-column">
+
+            <h3>
+                Contact Us
+            </h3>
+
+            <p>
+
+                <i class="fas fa-phone"></i>
+
+                +254 727 374 133
+
+            </p>
+
+
+            <p>
+
+                <i class="fas fa-envelope"></i>
+
+                info@elvis-techhub.com
+
+            </p>
+
+
+            <p>
+
+                <i class="fas fa-location-dot"></i>
+
+                Kenya
+
+            </p>
+
+
+            <p>
+
+                <i class="fas fa-clock"></i>
+
+                Mon - Sat: 8:00 AM - 7:00 PM
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026
+
+            <strong>
+                Elvis Tech Hub
+            </strong>.
+
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     WHATSAPP BUTTON
+===================================================== -->
+
+<a
+    href="https://wa.me/254727374133"
+    target="_blank"
+    class="whatsapp-button">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- BACK TO TOP -->
+
+<button
+    id="backToTop"
+    class="back-to-top">
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+
+
+<script src="js/script.js"></script>
+
+
+
+<!-- =====================================================
+     ORDER JAVASCRIPT
+===================================================== -->
+
+<script>
+
+const orderForm =
+    document.getElementById("orderForm");
+
+const successMessage =
+    document.getElementById("successMessage");
+
+
+orderForm.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById(
+                "customerName"
+            ).value.trim();
+
+
+        const phone =
+            document.getElementById(
+                "phone"
+            ).value.trim();
+
+
+        const email =
+            document.getElementById(
+                "email"
+            ).value.trim();
+
+
+        const service =
+            document.getElementById(
+                "orderService"
+            ).value;
+
+
+        const quantity =
+            document.getElementById(
+                "quantity"
+            ).value;
+
+
+        const deadline =
+            document.getElementById(
+                "deadline"
+            ).value;
+
+
+        const message =
+            document.getElementById(
+                "message"
+            ).value.trim();
+
+
+        const fileInput =
+            document.getElementById(
+                "file"
+            );
+
+
+        let fileName =
+            "No file attached";
+
+
+        if (
+            fileInput.files.length > 0
+        ) {
+
+            fileName =
+                fileInput.files[0].name;
+
+        }
+
+
+        /* =========================================
+           CREATE WHATSAPP MESSAGE
+        ========================================= */
+
+        const whatsappMessage =
+
+`Hello Elvis Tech Hub 👋
+
+I would like to place an order.
+
+━━━━━━━━━━━━━━━━━━
+
+👤 Name:
+${name}
+
+📱 Phone:
+${phone}
+
+📧 Email:
+${email || "Not provided"}
+
+🛠️ Service:
+${service}
+
+🔢 Quantity:
+${quantity}
+
+📅 Deadline:
+${deadline || "Not specified"}
+
+📎 File:
+${fileName}
+
+📝 Details:
+${message}
+
+━━━━━━━━━━━━━━━━━━
+
+Please let me know the price and next steps.
+
+Thank you.`;
+
+
+
+        /* =========================================
+           WHATSAPP NUMBER
+        ========================================= */
+
+        const whatsappNumber =
+            "254727374133";
+
+
+        const whatsappURL =
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            encodeURIComponent(
+                whatsappMessage
+            );
+
+
+        successMessage.classList.add(
+            "show"
+        );
+
+
+        /* Open WhatsApp */
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    }
+
+);
+
+</script>
+
+
+</body>
+
+</html>

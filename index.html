@@ -1,0 +1,2513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Elvis Tech Hub - Printing, Computer Services, Graphic Design, Cyber Services and Website Development.">
+
+    <meta name="keywords"
+          content="printing, computer services, graphic design, cyber services, website development, Kenya">
+
+    <title>Elvis Tech Hub | Digital Solutions</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =====================================
+           HERO
+        ===================================== */
+
+        .hero {
+            min-height: 720px;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #06111f,
+                    #0b315c,
+                    #0066ff
+                );
+
+            color: white;
+        }
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(0,198,255,0.15);
+
+            top: -180px;
+            right: -120px;
+
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: "";
+
+            position: absolute;
+
+            width: 350px;
+            height: 350px;
+
+            border-radius: 50%;
+
+            border: 2px solid
+                rgba(255,255,255,0.08);
+
+            bottom: -150px;
+            left: -100px;
+
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-25px);
+            }
+
+        }
+
+        .hero-container {
+
+            width: min(1150px, 90%);
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1.1fr 0.9fr;
+
+            gap: 50px;
+
+            align-items: center;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+
+            font-size:
+                clamp(42px, 6vw, 72px);
+
+            line-height: 1.05;
+
+            margin: 15px 0 25px;
+        }
+
+        .hero-content h1 span {
+            color: #00c6ff;
+        }
+
+        .hero-content p {
+
+            max-width: 650px;
+
+            color: #d2e0ee;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            margin-bottom: 30px;
+        }
+
+        .hero-label {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 8px 15px;
+
+            border-radius: 30px;
+
+            background:
+                rgba(255,255,255,0.1);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.15);
+
+            color: #00c6ff;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+        }
+
+        .hero-buttons {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            margin-bottom: 35px;
+        }
+
+        .hero-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 14px 24px;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .hero-btn-primary {
+
+            background: #0066ff;
+
+            color: white;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,102,255,0.3);
+        }
+
+        .hero-btn-primary:hover {
+            transform: translateY(-3px);
+            background: #0052cc;
+        }
+
+        .hero-btn-outline {
+
+            border:
+                1px solid
+                rgba(255,255,255,0.3);
+
+            color: white;
+        }
+
+        .hero-btn-outline:hover {
+            background: white;
+            color: #071426;
+        }
+
+        .hero-trust {
+
+            display: flex;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color: #c7d5e3;
+
+            font-size: 13px;
+        }
+
+        .trust-item i {
+            color: #00c6ff;
+        }
+
+
+        /* =====================================
+           HERO VISUAL
+        ===================================== */
+
+        .hero-visual {
+
+            display: flex;
+
+            justify-content: center;
+
+            position: relative;
+        }
+
+        .hero-card {
+
+            width: 390px;
+
+            max-width: 100%;
+
+            padding: 30px;
+
+            border-radius: 25px;
+
+            background:
+                rgba(255,255,255,0.08);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.15);
+
+            backdrop-filter: blur(15px);
+
+            box-shadow:
+                0 30px 80px
+                rgba(0,0,0,0.25);
+
+            transform:
+                rotate(2deg);
+
+            animation:
+                cardFloat 5s ease-in-out infinite;
+        }
+
+        @keyframes cardFloat {
+
+            0%,100% {
+                transform:
+                    translateY(0)
+                    rotate(2deg);
+            }
+
+            50% {
+                transform:
+                    translateY(-12px)
+                    rotate(-1deg);
+            }
+
+        }
+
+        .hero-card-top {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 30px;
+        }
+
+        .hero-card-logo {
+
+            width: 55px;
+            height: 55px;
+
+            border-radius: 15px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #0066ff;
+
+            font-size: 24px;
+        }
+
+        .hero-card-dots {
+            display: flex;
+            gap: 5px;
+        }
+
+        .hero-card-dots span {
+
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: #00c6ff;
+        }
+
+        .hero-card h3 {
+
+            font-size: 28px;
+
+            margin-bottom: 10px;
+        }
+
+        .hero-card p {
+
+            color: #c7d5e3;
+
+            line-height: 1.6;
+
+            margin-bottom: 25px;
+        }
+
+        .mini-services {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap: 10px;
+        }
+
+        .mini-service {
+
+            padding: 15px;
+
+            border-radius: 12px;
+
+            background:
+                rgba(255,255,255,0.07);
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            font-size: 13px;
+        }
+
+        .mini-service i {
+            color: #00c6ff;
+        }
+
+
+        /* =====================================
+           SECTION COMMON
+        ===================================== */
+
+        .section {
+
+            padding: 90px 20px;
+        }
+
+        .section-container {
+
+            max-width: 1150px;
+
+            margin: auto;
+        }
+
+        .section-heading {
+
+            text-align: center;
+
+            max-width: 700px;
+
+            margin:
+                0 auto 50px;
+        }
+
+        .section-label {
+
+            display: inline-block;
+
+            color: #0066ff;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+        .section-heading h2 {
+
+            color: #08111f;
+
+            font-size:
+                clamp(32px,5vw,45px);
+
+            margin: 12px 0 15px;
+        }
+
+        .section-heading h2 span {
+            color: #0066ff;
+        }
+
+        .section-heading p {
+
+            color: #687584;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================
+           SERVICES
+        ===================================== */
+
+        .services-preview {
+            background: #f5f8fc;
+        }
+
+        .services-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 22px;
+        }
+
+        .service-card {
+
+            background: white;
+
+            padding: 32px 27px;
+
+            border-radius: 18px;
+
+            border:
+                1px solid #e3e8ef;
+
+            transition: 0.3s;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .service-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 100%;
+
+            height: 3px;
+
+            background: #0066ff;
+
+            top: 0;
+
+            left: -100%;
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover::before {
+            left: 0;
+        }
+
+        .service-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                0 20px 45px
+                rgba(0,0,0,0.08);
+        }
+
+        .service-icon {
+
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background:
+                rgba(0,102,255,0.1);
+
+            color: #0066ff;
+
+            font-size: 24px;
+
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+
+            color: #08111f;
+
+            margin-bottom: 12px;
+
+            font-size: 20px;
+        }
+
+        .service-card p {
+
+            color: #687584;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            margin-bottom: 18px;
+        }
+
+        .service-card a {
+
+            color: #0066ff;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================
+           STATS
+        ===================================== */
+
+        .stats {
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #071426,
+                    #0c315c
+                );
+
+            color: white;
+
+            padding: 65px 20px;
+        }
+
+        .stats-grid {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            gap: 25px;
+
+            text-align: center;
+        }
+
+        .stat i {
+
+            font-size: 25px;
+
+            color: #00c6ff;
+
+            margin-bottom: 12px;
+        }
+
+        .stat h3 {
+
+            font-size: 38px;
+
+            margin-bottom: 5px;
+        }
+
+        .stat p {
+
+            color: #b8c7d6;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================
+           WHY US
+        ===================================== */
+
+        .why-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .why-content h2 {
+
+            font-size: 42px;
+
+            color: #08111f;
+
+            margin: 10px 0 20px;
+        }
+
+        .why-content h2 span {
+            color: #0066ff;
+        }
+
+        .why-content > p {
+
+            color: #687584;
+
+            line-height: 1.8;
+
+            margin-bottom: 30px;
+        }
+
+        .why-list {
+
+            display: grid;
+
+            gap: 18px;
+        }
+
+        .why-item {
+
+            display: flex;
+
+            gap: 15px;
+
+            align-items: flex-start;
+        }
+
+        .why-item-icon {
+
+            min-width: 45px;
+
+            height: 45px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background:
+                rgba(0,102,255,0.1);
+
+            color: #0066ff;
+        }
+
+        .why-item h3 {
+
+            color: #08111f;
+
+            margin-bottom: 5px;
+
+            font-size: 17px;
+        }
+
+        .why-item p {
+
+            color: #687584;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+        .why-visual {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0066ff,
+                    #071426
+                );
+
+            border-radius: 25px;
+
+            min-height: 430px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .why-visual::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 300px;
+            height: 300px;
+
+            border:
+                2px solid
+                rgba(255,255,255,0.15);
+
+            border-radius: 50%;
+        }
+
+        .why-visual-icon {
+
+            width: 150px;
+            height: 150px;
+
+            border-radius: 40px;
+
+            background:
+                rgba(255,255,255,0.12);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            backdrop-filter: blur(10px);
+
+            position: relative;
+        }
+
+        .why-visual-icon i {
+
+            font-size: 70px;
+
+            color: white;
+        }
+
+
+        /* =====================================
+           PORTFOLIO PREVIEW
+        ===================================== */
+
+        .portfolio-preview {
+
+            background: #f5f8fc;
+        }
+
+        .portfolio-grid-home {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 22px;
+        }
+
+        .portfolio-item {
+
+            height: 260px;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #071426,
+                    #0066ff
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+        .portfolio-item i {
+
+            font-size: 65px;
+
+            color: white;
+
+            transition: 0.4s;
+        }
+
+        .portfolio-item:hover i {
+            transform:
+                scale(1.2)
+                rotate(5deg);
+        }
+
+        .portfolio-overlay {
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(0,0,0,0.8)
+                );
+
+            display: flex;
+
+            align-items: flex-end;
+
+            padding: 25px;
+
+            opacity: 0;
+
+            transition: 0.3s;
+        }
+
+        .portfolio-item:hover
+        .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-overlay h3 {
+
+            color: white;
+
+            font-size: 20px;
+        }
+
+
+        /* =====================================
+           TESTIMONIALS
+        ===================================== */
+
+        .testimonials-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 22px;
+        }
+
+        .testimonial {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            border:
+                1px solid #e3e8ef;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,0,0,0.04);
+        }
+
+        .stars {
+
+            color: #ffb400;
+
+            margin-bottom: 18px;
+        }
+
+        .testimonial p {
+
+            color: #687584;
+
+            line-height: 1.8;
+
+            font-size: 14px;
+
+            margin-bottom: 22px;
+        }
+
+        .client {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+        .client-avatar {
+
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #0066ff;
+
+            color: white;
+
+            font-weight: bold;
+        }
+
+        .client h4 {
+            color: #08111f;
+        }
+
+        .client span {
+
+            color: #8793a0;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================
+           CTA
+        ===================================== */
+
+        .home-cta {
+
+            padding: 100px 20px;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #0066ff,
+                    #071426
+                );
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .home-cta h2 {
+
+            font-size:
+                clamp(32px,5vw,50px);
+
+            margin-bottom: 15px;
+        }
+
+        .home-cta p {
+
+            max-width: 650px;
+
+            margin:
+                0 auto 30px;
+
+            color: #d4e2f1;
+
+            line-height: 1.8;
+        }
+
+        .cta-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 15px 28px;
+
+            background: white;
+
+            color: #0066ff;
+
+            text-decoration: none;
+
+            border-radius: 10px;
+
+            font-weight: 800;
+
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,0.2);
+        }
+
+
+        /* =====================================
+           RESPONSIVE
+        ===================================== */
+
+        @media (max-width: 900px) {
+
+            .hero-container,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 90px 0;
+            }
+
+            .hero-visual {
+                margin-top: 30px;
+            }
+
+            .services-grid,
+            .portfolio-grid-home,
+            .testimonials-grid {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .services-grid,
+            .portfolio-grid-home,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+            .hero-trust {
+                gap: 12px;
+            }
+
+            .hero-card {
+                width: auto;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     TOP BAR
+===================================== -->
+
+<div class="top-bar">
+
+    <div class="top-container">
+
+        <div class="top-left">
+
+            <span>
+                <i class="fas fa-phone"></i>
+                +254 726247566
+            </span>
+
+            <span>
+                <i class="fas fa-envelope"></i>
+                info@elvis-techhub.com
+            </span>
+
+        </div>
+
+
+        <div class="top-right">
+
+            <a href="#">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="https://wa.me/254726247566"
+               target="_blank">
+
+                <i class="fab fa-whatsapp"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================
+     NAVIGATION
+===================================== -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html"
+           class="logo">
+
+            <div class="logo-icon">
+
+                <i class="fas fa-laptop-code"></i>
+
+            </div>
+
+            <div class="logo-text">
+
+                <h2>ELVIS</h2>
+
+                <span>TECH HUB</span>
+
+            </div>
+
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html"
+                   class="active">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="pricing.html">
+                    Pricing
+                </a>
+            </li>
+
+            <li>
+                <a href="order.html">
+                    Order
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="portfolio.html">
+                    Portfolio
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <a href="order.html"
+           class="nav-button">
+
+            Get Started
+
+            <i class="fas fa-arrow-right"></i>
+
+        </a>
+
+
+        <button
+            class="menu-btn"
+            id="menuBtn">
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================
+     HERO
+===================================== -->
+
+<section class="hero">
+
+    <div class="hero-container">
+
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+
+                <i class="fas fa-bolt"></i>
+
+                DIGITAL SOLUTIONS FOR YOU
+
+            </div>
+
+
+            <h1>
+
+                We Turn Your
+                <span>Ideas</span>
+                Into Reality.
+
+            </h1>
+
+
+            <p>
+
+                Welcome to Elvis Tech Hub — your trusted
+                destination for professional printing,
+                computer services, graphic design, cyber
+                services and modern website development.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="order.html"
+                   class="hero-btn hero-btn-primary">
+
+                    Start a Project
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+
+                <a href="portfolio.html"
+                   class="hero-btn hero-btn-outline">
+
+                    View Our Work
+
+                    <i class="fas fa-eye"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-trust">
+
+                <div class="trust-item">
+
+                    <i class="fas fa-circle-check"></i>
+
+                    Quality Work
+
+                </div>
+
+
+                <div class="trust-item">
+
+                    <i class="fas fa-circle-check"></i>
+
+                    Fast Service
+
+                </div>
+
+
+                <div class="trust-item">
+
+                    <i class="fas fa-circle-check"></i>
+
+                    Customer Focused
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- HERO CARD -->
+
+        <div class="hero-visual">
+
+            <div class="hero-card">
+
+                <div class="hero-card-top">
+
+                    <div class="hero-card-logo">
+
+                        <i class="fas fa-laptop-code"></i>
+
+                    </div>
+
+
+                    <div class="hero-card-dots">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+                <h3>
+                    Your Digital Partner
+                </h3>
+
+
+                <p>
+
+                    From printing a single document
+                    to building a complete website,
+                    we've got you covered.
+
+                </p>
+
+
+                <div class="mini-services">
+
+                    <div class="mini-service">
+
+                        <i class="fas fa-print"></i>
+
+                        Printing
+
+                    </div>
+
+
+                    <div class="mini-service">
+
+                        <i class="fas fa-palette"></i>
+
+                        Design
+
+                    </div>
+
+
+                    <div class="mini-service">
+
+                        <i class="fas fa-laptop"></i>
+
+                        Computer
+
+                    </div>
+
+
+                    <div class="mini-service">
+
+                        <i class="fas fa-code"></i>
+
+                        Websites
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     SERVICES
+===================================== -->
+
+<section class="section services-preview">
+
+    <div class="section-container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                WHAT WE DO
+            </span>
+
+            <h2>
+                Our <span>Services</span>
+            </h2>
+
+            <p>
+
+                Professional digital and printing
+                solutions designed to help individuals,
+                students and businesses achieve more.
+
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <div class="service-card">
+<img src="images/printing.jfif"
+     alt="Printing Services"
+     class="service-image">
+                <div class="service-icon">
+
+                    <i class="fas fa-print"></i>
+
+                </div>
+
+                <h3>
+                    Printing Services
+                </h3>
+
+                <p>
+
+                    Quality document, poster, sticker,
+                    card and promotional printing.
+
+                </p>
+
+                <a href="services.html">
+
+                    Learn More
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+<img src="images/graphic-design.jfif"
+     alt="Graphic Design"
+     class="service-image">
+                <div class="service-icon">
+
+                    <i class="fas fa-palette"></i>
+
+                </div>
+
+                <h3>
+                    Graphic Design
+                </h3>
+
+                <p>
+
+                    Professional posters, logos,
+                    invitations, business cards and
+                    branding materials.
+
+                </p>
+
+                <a href="services.html">
+
+                    Learn More
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+<img src="images/computer.jfif"
+     alt="Computer Services"
+     class="service-image">
+                <div class="service-icon">
+
+                    <i class="fas fa-laptop"></i>
+
+                </div>
+
+                <h3>
+                    Computer Services
+                </h3>
+
+                <p>
+
+                    Computer setup, software installation,
+                    troubleshooting and maintenance.
+
+                </p>
+
+                <a href="services.html">
+
+                    Learn More
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+                <img src="images/website.jfif"
+     alt="Website Development"
+     class="service-image">
+                <div class="service-icon">
+
+                    <i class="fas fa-globe"></i>
+
+                </div>
+
+                <h3>
+                    Website Development
+                </h3>
+
+                <p>
+
+                    Modern responsive websites for
+                    businesses, organizations and individuals.
+
+                </p>
+
+                <a href="services.html">
+
+                    Learn More
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+<img src="images/branding.jfif"
+     alt="Business Branding"
+     class="service-image">
+                <div class="service-icon">
+
+                    <i class="fas fa-id-card"></i>
+
+                </div>
+
+                <h3>
+                    Business Branding
+                </h3>
+
+                <p>
+
+                    Build a strong identity with professional
+                    branding and promotional materials.
+
+                </p>
+
+                <a href="services.html">
+
+                    Learn More
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+<img src="images/cyber.jfif"
+     alt="Cyber Services"
+     class="service-image">
+                <div class="service-icon">
+
+                    <i class="fas fa-file-lines"></i>
+
+                </div>
+
+                <h3>
+                    Cyber Services
+                </h3>
+
+                <p>
+
+                    Fast and reliable digital assistance,
+                    document preparation and online services.
+
+                </p>
+
+                <a href="services.html">
+
+                    Learn More
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     STATS
+===================================== -->
+
+<section class="stats">
+
+    <div class="stats-grid">
+
+
+        <div class="stat">
+
+            <i class="fas fa-users"></i>
+
+            <h3 data-count="250">
+                0
+            </h3>
+
+            <p>
+                Happy Clients
+            </p>
+
+        </div>
+
+
+        <div class="stat">
+
+            <i class="fas fa-project-diagram"></i>
+
+            <h3 data-count="150">
+                0
+            </h3>
+
+            <p>
+                Projects Completed
+            </p>
+
+        </div>
+
+
+        <div class="stat">
+
+            <i class="fas fa-award"></i>
+
+            <h3 data-count="5">
+                0
+            </h3>
+
+            <p>
+                Years Experience
+            </p>
+
+        </div>
+
+
+        <div class="stat">
+
+            <i class="fas fa-headset"></i>
+
+            <h3>
+                24/7
+            </h3>
+
+            <p>
+                Customer Support
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     WHY CHOOSE US
+===================================== -->
+
+<section class="section">
+
+    <div class="section-container">
+
+        <div class="why-grid">
+
+
+            <div class="why-content">
+
+                <span class="section-label">
+                    WHY CHOOSE US
+                </span>
+
+                <h2>
+
+                    More Than a Service.
+                    <span>Your Partner.</span>
+
+                </h2>
+
+                <p>
+
+                    We combine technology, creativity and
+                    customer service to deliver solutions
+                    that actually make a difference.
+
+                </p>
+
+
+                <div class="why-list">
+
+
+                    <div class="why-item">
+
+                        <div class="why-item-icon">
+
+                            <i class="fas fa-star"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Quality First
+                            </h3>
+
+                            <p>
+                                We focus on delivering clean,
+                                professional and reliable work.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <div class="why-item-icon">
+
+                            <i class="fas fa-bolt"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Fast Turnaround
+                            </h3>
+
+                            <p>
+                                We understand that your time
+                                matters and work efficiently.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <div class="why-item-icon">
+
+                            <i class="fas fa-handshake"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Customer Focused
+                            </h3>
+
+                            <p>
+                                Your satisfaction is at the
+                                heart of everything we do.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <div class="why-item-icon">
+
+                            <i class="fas fa-wallet"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Affordable Solutions
+                            </h3>
+
+                            <p>
+                                Professional services at
+                                competitive prices.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="why-visual">
+
+                <div class="why-visual-icon">
+
+                    <i class="fas fa-laptop-code"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PORTFOLIO
+===================================== -->
+
+<section class="section portfolio-preview">
+
+    <div class="section-container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                OUR WORK
+            </span>
+
+            <h2>
+                Featured <span>Projects</span>
+            </h2>
+
+            <p>
+
+                Take a look at some of the work and
+                services we can provide.
+
+            </p>
+
+        </div>
+
+
+        <div class="portfolio-grid-home">
+
+
+            <div class="portfolio-item">
+
+                <i class="fas fa-palette"></i>
+
+                <div class="portfolio-overlay">
+
+                    <h3>
+                        Graphic Design
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="portfolio-item">
+
+                <i class="fas fa-print"></i>
+
+                <div class="portfolio-overlay">
+
+                    <h3>
+                        Professional Printing
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="portfolio-item">
+
+                <i class="fas fa-code"></i>
+
+                <div class="portfolio-overlay">
+
+                    <h3>
+                        Website Development
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="portfolio-item">
+
+                <i class="fas fa-id-card"></i>
+
+                <div class="portfolio-overlay">
+
+                    <h3>
+                        Business Branding
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="portfolio-item">
+
+                <i class="fas fa-laptop"></i>
+
+                <div class="portfolio-overlay">
+
+                    <h3>
+                        Computer Services
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="portfolio-item">
+
+                <i class="fas fa-file-lines"></i>
+
+                <div class="portfolio-overlay">
+
+                    <h3>
+                        Digital Services
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div style="text-align:center;margin-top:40px;">
+
+            <a href="portfolio.html"
+               class="btn btn-primary">
+
+                View Full Portfolio
+
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     TESTIMONIALS
+===================================== -->
+
+<section class="section">
+
+    <div class="section-container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                TESTIMONIALS
+            </span>
+
+            <h2>
+                What Our <span>Clients Say</span>
+            </h2>
+
+            <p>
+
+                We believe good service starts with
+                understanding our customers.
+
+            </p>
+
+        </div>
+
+
+        <div class="testimonials-grid">
+
+
+            <div class="testimonial">
+
+                <div class="stars">
+
+                    ★★★★★
+
+                </div>
+
+                <p>
+
+                    "The poster design was exactly what
+                    I wanted. Professional work and very
+                    fast service."
+
+                </p>
+
+                <div class="client">
+
+                    <div class="client-avatar">
+                        J
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Janet
+                        </h4>
+
+                        <span>
+                            Customer
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <div class="stars">
+
+                    ★★★★★
+
+                </div>
+
+                <p>
+
+                    "Very helpful with my computer problem.
+                    Everything was explained clearly and
+                    fixed properly."
+
+                </p>
+
+                <div class="client">
+
+                    <div class="client-avatar">
+                        D
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            David
+                        </h4>
+
+                        <span>
+                            Customer
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <div class="stars">
+
+                    ★★★★★
+
+                </div>
+
+                <p>
+
+                    "I needed a website for my business and
+                    got a modern design that works perfectly
+                    on my phone."
+
+                </p>
+
+                <div class="client">
+
+                    <div class="client-avatar">
+                        M
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Mary
+                        </h4>
+
+                        <span>
+                            Business Owner
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     CTA
+===================================== -->
+
+<section class="home-cta">
+
+    <h2>
+        Ready to Bring Your Idea to Life?
+    </h2>
+
+    <p>
+
+        Tell us what you need and let's create
+        something professional together.
+
+    </p>
+
+    <a href="order.html"
+       class="cta-button">
+
+        Start Your Project
+
+        <i class="fas fa-arrow-right"></i>
+
+    </a>
+
+</section>
+
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-about">
+
+            <div class="footer-logo">
+
+                <i class="fas fa-laptop-code"></i>
+
+                <div>
+
+                    <strong>ELVIS</strong>
+
+                    <span>TECH HUB</span>
+
+                </div>
+
+            </div>
+
+            <p>
+
+                Your trusted partner for computer services,
+                printing, cyber services, graphic design and
+                digital solutions.
+
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="pricing.html">
+                Pricing
+            </a>
+
+            <a href="portfolio.html">
+                Portfolio
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Services
+            </h3>
+
+            <a href="services.html">
+                Printing
+            </a>
+
+            <a href="services.html">
+                Graphic Design
+            </a>
+
+            <a href="services.html">
+                Computer Services
+            </a>
+
+            <a href="services.html">
+                Web Development
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                <i class="fas fa-phone"></i>
+                +254 726247566
+            </p>
+
+            <p>
+                <i class="fas fa-envelope"></i>
+                elvismutai146@gmail.com
+            </p>
+
+            <p>
+                <i class="fas fa-location-dot"></i>
+                Kenya
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026
+            <strong>Elvis Tech Hub</strong>.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================
+     WHATSAPP
+===================================== -->
+
+<a href="https://wa.me/254726247566"
+   class="whatsapp-button"
+   target="_blank">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- =====================================
+     BACK TO TOP
+===================================== -->
+
+<button id="backToTop"
+        class="back-to-top">
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+
+
+<script src="js/script.js"></script>
+
+
+<script>
+
+    /* =====================================
+       COUNTER ANIMATION
+    ===================================== */
+
+    const counters =
+        document.querySelectorAll(
+            "[data-count]"
+        );
+
+    let counterStarted = false;
+
+
+    function startCounters() {
+
+        if (counterStarted)
+            return;
+
+        counterStarted = true;
+
+
+        counters.forEach(counter => {
+
+            const target =
+                Number(counter.dataset.count);
+
+            let current = 0;
+
+            const increment =
+                Math.max(
+                    1,
+                    Math.ceil(target / 60)
+                );
+
+
+            const update = () => {
+
+                current += increment;
+
+                if (current >= target) {
+
+                    counter.textContent =
+                        target + "+";
+
+                    return;
+
+                }
+
+                counter.textContent =
+                    current;
+
+                requestAnimationFrame(update);
+
+            };
+
+            update();
+
+        });
+
+    }
+
+
+    const statsSection =
+        document.querySelector(".stats");
+
+
+    const observer =
+        new IntersectionObserver(
+            entries => {
+
+                if (
+                    entries[0].isIntersecting
+                ) {
+
+                    startCounters();
+
+                }
+
+            },
+            {
+                threshold: 0.3
+            }
+        );
+
+
+    observer.observe(statsSection);
+
+</script>
+
+
+</body>
+
+</html>

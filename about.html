@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Learn more about Elvis Tech Hub, our mission, vision, values and digital services.">
+
+    <title>About Us | Elvis Tech Hub</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =========================================
+           ABOUT HERO
+        ========================================= */
+
+        .about-hero {
+            background:
+                linear-gradient(
+                    120deg,
+                    #071426,
+                    #0c315c
+                );
+
+            color: white;
+            text-align: center;
+            padding: 95px 20px;
+        }
+
+        .about-hero .section-label {
+            color: #00c6ff;
+        }
+
+        .about-hero h1 {
+            font-size: clamp(40px, 6vw, 65px);
+            line-height: 1.1;
+            margin: 15px 0;
+        }
+
+        .about-hero h1 span {
+            color: #00c6ff;
+        }
+
+        .about-hero p {
+            max-width: 720px;
+            margin: auto;
+            color: #c8d5e3;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           STORY
+        ========================================= */
+
+        .about-story {
+            padding: 90px 20px;
+            background: white;
+        }
+
+        .about-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .story-image {
+            position: relative;
+        }
+
+        .story-image-box {
+            min-height: 430px;
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #071426,
+                    #0066ff
+                );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 25px 60px
+                rgba(0,0,0,0.15);
+        }
+
+        .story-image-box i {
+            font-size: 130px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .experience-badge {
+            position: absolute;
+
+            right: -20px;
+            bottom: 30px;
+
+            background: #0066ff;
+            color: white;
+
+            padding: 20px 25px;
+
+            border-radius: 14px;
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,0.2);
+        }
+
+        .experience-badge strong {
+            display: block;
+            font-size: 30px;
+        }
+
+        .experience-badge span {
+            font-size: 12px;
+        }
+
+        .story-content .section-label {
+            color: #0066ff;
+        }
+
+        .story-content h2 {
+            font-size: 40px;
+            color: #08111f;
+            margin: 12px 0 20px;
+        }
+
+        .story-content h2 span {
+            color: #0066ff;
+        }
+
+        .story-content p {
+            color: #657281;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================================
+           MISSION VISION
+        ========================================= */
+
+        .mission-section {
+            padding: 90px 20px;
+            background: #f5f8fc;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .mission-card {
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            border: 1px solid #e3e8ef;
+            transition: 0.3s;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-6px);
+            box-shadow:
+                0 20px 45px
+                rgba(0,0,0,0.08);
+        }
+
+        .mission-icon {
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(0,102,255,0.1);
+            color: #0066ff;
+
+            border-radius: 13px;
+
+            font-size: 25px;
+
+            margin-bottom: 20px;
+        }
+
+        .mission-card h3 {
+            color: #08111f;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .mission-card p {
+            color: #657281;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           VALUES
+        ========================================= */
+
+        .values-section {
+            padding: 90px 20px;
+            background: white;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .section-heading .section-label {
+            color: #0066ff;
+        }
+
+        .section-heading h2 {
+            font-size: 40px;
+            color: #08111f;
+            margin: 12px 0;
+        }
+
+        .section-heading p {
+            color: #657281;
+            line-height: 1.7;
+        }
+
+        .values-grid {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 30px 20px;
+
+            border-radius: 16px;
+
+            background: #f7f9fc;
+
+            border: 1px solid #e7ecf2;
+
+            transition: 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .value-card i {
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 18px;
+
+            border-radius: 50%;
+
+            background: #0066ff;
+            color: white;
+
+            font-size: 22px;
+        }
+
+        .value-card h3 {
+            color: #08111f;
+            margin-bottom: 10px;
+        }
+
+        .value-card p {
+            color: #6b7785;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           STATS
+        ========================================= */
+
+        .stats-section {
+            padding: 75px 20px;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #071426,
+                    #0d3157
+                );
+
+            color: white;
+        }
+
+        .stats-grid {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+
+            text-align: center;
+        }
+
+        .stat {
+            padding: 20px;
+        }
+
+        .stat i {
+            color: #00c6ff;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+
+        .stat span {
+            color: #b8c7d6;
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           WHY US
+        ========================================= */
+
+        .why-section {
+            padding: 90px 20px;
+            background: #f5f8fc;
+        }
+
+        .why-grid {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+        .why-content h2 {
+            font-size: 40px;
+            color: #08111f;
+            margin: 15px 0 20px;
+        }
+
+        .why-content h2 span {
+            color: #0066ff;
+        }
+
+        .why-content p {
+            color: #657281;
+            line-height: 1.8;
+        }
+
+        .why-list {
+            margin-top: 25px;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .why-item i {
+            width: 35px;
+            height: 35px;
+
+            min-width: 35px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #0066ff;
+            color: white;
+
+            border-radius: 50%;
+
+            font-size: 13px;
+        }
+
+        .why-item h3 {
+            color: #08111f;
+            margin-bottom: 4px;
+        }
+
+        .why-item p {
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .why-visual {
+            min-height: 430px;
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0066ff,
+                    #00c6ff
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            box-shadow:
+                0 25px 60px
+                rgba(0,102,255,0.2);
+        }
+
+        .why-visual i {
+            font-size: 150px;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .about-cta {
+            padding: 90px 20px;
+
+            background: #0066ff;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .about-cta h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .about-cta p {
+            color: #dce9ff;
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .story-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .experience-badge {
+                right: 15px;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .values-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .story-content h2,
+            .why-content h2 {
+                font-size: 32px;
+            }
+
+            .about-cta h2 {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     TOP BAR
+========================================= -->
+
+<div class="top-bar">
+
+    <div class="top-container">
+
+        <div class="top-left">
+
+            <span>
+                <i class="fas fa-phone"></i>
+                +254 726247566
+            </span>
+
+            <span>
+                <i class="fas fa-envelope"></i>
+                elvismutai146@gmail.com
+            </span>
+
+        </div>
+
+        <div class="top-right">
+
+            <a href="#">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html"
+           class="logo">
+
+            <div class="logo-icon">
+
+                <i class="fas fa-laptop-code"></i>
+
+            </div>
+
+            <div class="logo-text">
+
+                <h2>ELVIS</h2>
+
+                <span>TECH HUB</span>
+
+            </div>
+
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="pricing.html">
+                    Pricing
+                </a>
+            </li>
+
+            <li>
+                <a href="order.html">
+                    Order
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html"
+                   class="active">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="portfolio.html">
+                    Portfolio
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <a href="order.html"
+           class="nav-button">
+
+            Get Started
+
+            <i class="fas fa-arrow-right"></i>
+
+        </a>
+
+
+        <button class="menu-btn"
+                id="menuBtn">
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="about-hero">
+
+    <span class="section-label">
+        WHO WE ARE
+    </span>
+
+    <h1>
+        About <span>Elvis Tech Hub</span>
+    </h1>
+
+    <p>
+        A modern technology and digital services hub
+        helping individuals, students, businesses and
+        organizations turn ideas into professional results.
+    </p>
+
+</section>
+
+
+
+<!-- =========================================
+     OUR STORY
+========================================= -->
+
+<section class="about-story">
+
+    <div class="about-container">
+
+        <div class="story-grid">
+
+
+            <div class="story-image">
+
+                <div class="story-image-box">
+
+                    <i class="fas fa-laptop-code"></i>
+
+                </div>
+
+
+                <div class="experience-badge">
+
+                    <strong>100+</strong>
+
+                    <span>
+                        Projects & Services
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="story-content">
+
+                <span class="section-label">
+                    OUR STORY
+                </span>
+
+                <h2>
+                    Technology Made
+                    <span>Simple.</span>
+                </h2>
+
+                <p>
+                    Elvis Tech Hub is a technology and digital
+                    services business focused on providing
+                    practical, affordable and professional
+                    solutions.
+                </p>
+
+                <p>
+                    From printing and document services to
+                    graphic design, computer support and
+                    website development, our goal is to make
+                    technology accessible and useful for
+                    everyone.
+                </p>
+
+                <p>
+                    We believe that every customer deserves
+                    quality work, clear communication and
+                    reliable service.
+                </p>
+
+                <a href="services.html"
+                   class="btn btn-primary">
+
+                    Explore Our Services
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     MISSION & VISION
+========================================= -->
+
+<section class="mission-section">
+
+    <div class="mission-grid">
+
+
+        <div class="mission-card">
+
+            <div class="mission-icon">
+
+                <i class="fas fa-bullseye"></i>
+
+            </div>
+
+            <h3>
+                Our Mission
+            </h3>
+
+            <p>
+                To provide accessible, affordable and
+                high-quality digital and technology services
+                that help individuals and businesses work,
+                learn and grow.
+            </p>
+
+        </div>
+
+
+
+        <div class="mission-card">
+
+            <div class="mission-icon">
+
+                <i class="fas fa-eye"></i>
+
+            </div>
+
+            <h3>
+                Our Vision
+            </h3>
+
+            <p>
+                To become a trusted technology and digital
+                services hub known for innovation, quality,
+                professionalism and excellent customer
+                service.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     VALUES
+========================================= -->
+
+<section class="values-section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            OUR VALUES
+        </span>
+
+        <h2>
+            What We Stand For
+        </h2>
+
+        <p>
+            Our values guide how we work with every
+            customer and how we approach every project.
+        </p>
+
+    </div>
+
+
+    <div class="values-grid">
+
+
+        <div class="value-card">
+
+            <i class="fas fa-star"></i>
+
+            <h3>
+                Quality
+            </h3>
+
+            <p>
+                We aim to deliver professional work
+                that meets high standards.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <i class="fas fa-handshake"></i>
+
+            <h3>
+                Integrity
+            </h3>
+
+            <p>
+                We believe in honest communication,
+                transparency and trust.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <i class="fas fa-lightbulb"></i>
+
+            <h3>
+                Innovation
+            </h3>
+
+            <p>
+                We use technology and creativity to
+                find better solutions.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <i class="fas fa-heart"></i>
+
+            <h3>
+                Customer First
+            </h3>
+
+            <p>
+                We listen to our customers and focus
+                on delivering useful results.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     STATS
+========================================= -->
+
+<section class="stats-section">
+
+    <div class="stats-grid">
+
+
+        <div class="stat">
+
+            <i class="fas fa-users"></i>
+
+            <strong>100+</strong>
+
+            <span>
+                Customers Served
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <i class="fas fa-folder-open"></i>
+
+            <strong>150+</strong>
+
+            <span>
+                Projects Completed
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <i class="fas fa-layer-group"></i>
+
+            <strong>10+</strong>
+
+            <span>
+                Digital Services
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <i class="fas fa-clock"></i>
+
+            <strong>24/7</strong>
+
+            <span>
+                Online Enquiries
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     WHY CHOOSE US
+========================================= -->
+
+<section class="why-section">
+
+    <div class="why-grid">
+
+
+        <div class="why-content">
+
+            <span class="section-label">
+                WHY CHOOSE US
+            </span>
+
+            <h2>
+                Your Ideas.
+                <span>Our Expertise.</span>
+            </h2>
+
+            <p>
+                Whether you need a simple document printed,
+                a professional design created or a complete
+                website developed, we are ready to help.
+            </p>
+
+
+            <div class="why-list">
+
+
+                <div class="why-item">
+
+                    <i class="fas fa-check"></i>
+
+                    <div>
+
+                        <h3>
+                            Professional Service
+                        </h3>
+
+                        <p>
+                            We focus on clean, accurate and
+                            professional results.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <i class="fas fa-check"></i>
+
+                    <div>
+
+                        <h3>
+                            Affordable Solutions
+                        </h3>
+
+                        <p>
+                            We offer competitive prices without
+                            compromising quality.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <i class="fas fa-check"></i>
+
+                    <div>
+
+                        <h3>
+                            Modern Technology
+                        </h3>
+
+                        <p>
+                            We use modern tools and digital
+                            solutions to serve you better.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <i class="fas fa-check"></i>
+
+                    <div>
+
+                        <h3>
+                            Fast Response
+                        </h3>
+
+                        <p>
+                            We respond quickly to enquiries
+                            and customer requests.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="why-visual">
+
+            <i class="fas fa-microchip"></i>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CTA
+========================================= -->
+
+<section class="about-cta">
+
+    <h2>
+        Ready to Work With Us?
+    </h2>
+
+    <p>
+        Let's turn your idea, project or business need
+        into a professional digital solution.
+    </p>
+
+    <a href="order.html"
+       class="btn btn-light">
+
+        Start Your Order
+
+        <i class="fas fa-arrow-right"></i>
+
+    </a>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-about">
+
+            <div class="footer-logo">
+
+                <i class="fas fa-laptop-code"></i>
+
+                <div>
+
+                    <strong>ELVIS</strong>
+
+                    <span>TECH HUB</span>
+
+                </div>
+
+            </div>
+
+            <p>
+                Your trusted partner for computer services,
+                printing, cyber services, graphic design and
+                digital solutions.
+            </p>
+
+            <div class="social-links">
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="pricing.html">
+                Pricing
+            </a>
+
+            <a href="order.html">
+                Order
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Services
+            </h3>
+
+            <a href="services.html">
+                Printing
+            </a>
+
+            <a href="services.html">
+                Computer Services
+            </a>
+
+            <a href="services.html">
+                Graphic Design
+            </a>
+
+            <a href="services.html">
+                Cyber Services
+            </a>
+
+            <a href="services.html">
+                Web Development
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column contact-column">
+
+            <h3>
+                Contact Us
+            </h3>
+
+            <p>
+                <i class="fas fa-phone"></i>
+                +254 727 374 133
+            </p>
+
+            <p>
+                <i class="fas fa-envelope"></i>
+                info@elvis-techhub.com
+            </p>
+
+            <p>
+                <i class="fas fa-location-dot"></i>
+                Kenya
+            </p>
+
+            <p>
+                <i class="fas fa-clock"></i>
+                Mon - Sat: 8:00 AM - 7:00 PM
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026
+            <strong>Elvis Tech Hub</strong>.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     WHATSAPP
+========================================= -->
+
+<a href="https://wa.me/25426247566"
+   class="whatsapp-button"
+   target="_blank">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- BACK TO TOP -->
+
+<button id="backToTop"
+        class="back-to-top">
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>

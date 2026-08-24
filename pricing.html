@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Elvis Tech Hub pricing - Printing, computer, graphic design, cyber and digital services.">
+
+    <title>Pricing | Elvis Tech Hub</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =====================================================
+           PRICING PAGE
+        ===================================================== */
+
+        .pricing-hero {
+            background:
+                linear-gradient(
+                    120deg,
+                    #071426,
+                    #0c315c
+                );
+
+            color: white;
+            text-align: center;
+            padding: 95px 20px;
+        }
+
+        .pricing-hero .section-label {
+            color: #00c6ff;
+        }
+
+        .pricing-hero h1 {
+            font-size: clamp(40px, 6vw, 65px);
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .pricing-hero h1 span {
+            color: #00c6ff;
+        }
+
+        .pricing-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #c8d5e3;
+        }
+
+
+        /* PRICE TABLE */
+
+        .price-section {
+            padding: 80px 20px;
+            background: #f5f8fc;
+        }
+
+        .price-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .price-category {
+            margin-bottom: 60px;
+        }
+
+        .price-category-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .price-category-title i {
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(0,102,255,0.1);
+            color: #0066ff;
+
+            border-radius: 12px;
+
+            font-size: 23px;
+        }
+
+        .price-category-title h2 {
+            font-size: 27px;
+            color: #08111f;
+        }
+
+        .price-category-title p {
+            color: #697685;
+            font-size: 14px;
+        }
+
+        .price-table-wrapper {
+            background: white;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            border: 1px solid #e3e8ef;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.04);
+        }
+
+        .price-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+
+            padding: 18px 25px;
+
+            border-bottom: 1px solid #e8edf2;
+
+            align-items: center;
+        }
+
+        .price-row:last-child {
+            border-bottom: none;
+        }
+
+        .price-row.header {
+            background: #08111f;
+            color: white;
+            font-weight: bold;
+        }
+
+        .price-row strong {
+            color: #0066ff;
+        }
+
+        .price-row.header strong {
+            color: white;
+        }
+
+
+        /* CALCULATOR */
+
+        .calculator-section {
+            padding: 90px 20px;
+            background: white;
+        }
+
+        .calculator {
+            max-width: 900px;
+            margin: auto;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #071426,
+                    #0d3157
+                );
+
+            color: white;
+
+            padding: 45px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 25px 60px rgba(0,0,0,0.15);
+        }
+
+        .calculator-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .calculator-heading h2 {
+            font-size: 35px;
+            margin-bottom: 8px;
+        }
+
+        .calculator-heading p {
+            color: #b9c8d7;
+        }
+
+        .calculator-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .form-group select,
+        .form-group input {
+            width: 100%;
+
+            padding: 14px;
+
+            border-radius: 8px;
+
+            border: 1px solid rgba(255,255,255,0.2);
+
+            background: rgba(255,255,255,0.08);
+
+            color: white;
+
+            outline: none;
+        }
+
+        .form-group select option {
+            color: #111;
+            background: white;
+        }
+
+        .form-group input::placeholder {
+            color: #aebdcb;
+        }
+
+        .calculate-btn {
+            grid-column: 1 / -1;
+
+            border: none;
+
+            padding: 15px;
+
+            background: #0066ff;
+            color: white;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            font-size: 15px;
+
+            transition: 0.3s ease;
+        }
+
+        .calculate-btn:hover {
+            background: #00c6ff;
+            transform: translateY(-2px);
+        }
+
+        .result-box {
+            margin-top: 30px;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            background: rgba(255,255,255,0.08);
+
+            text-align: center;
+
+            display: none;
+        }
+
+        .result-box.show {
+            display: block;
+        }
+
+        .result-box span {
+            color: #b9c8d7;
+        }
+
+        .total-price {
+            display: block;
+
+            color: #00c6ff;
+
+            font-size: 40px;
+
+            font-weight: bold;
+
+            margin-top: 5px;
+        }
+
+        .calculator-order {
+            margin-top: 20px;
+
+            display: inline-flex;
+        }
+
+
+        /* CTA */
+
+        .pricing-cta {
+            padding: 80px 20px;
+
+            background: #0066ff;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .pricing-cta h2 {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .pricing-cta p {
+            color: #dce9ff;
+            margin-bottom: 25px;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 700px) {
+
+            .price-row {
+                grid-template-columns: 1.6fr 0.8fr 0.8fr;
+                padding: 15px;
+                font-size: 13px;
+            }
+
+            .calculator {
+                padding: 30px 20px;
+            }
+
+            .calculator-form {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full,
+            .calculate-btn {
+                grid-column: auto;
+            }
+
+            .pricing-cta h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+
+    <div class="top-container">
+
+        <div class="top-left">
+
+            <span>
+                <i class="fas fa-phone"></i>
+                +254 727 374 133
+            </span>
+
+            <span>
+                <i class="fas fa-envelope"></i>
+                info@elvis-techhub.com
+            </span>
+
+        </div>
+
+
+        <div class="top-right">
+
+            <a href="#">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-icon">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+
+            <div class="logo-text">
+
+                <h2>ELVIS</h2>
+
+                <span>TECH HUB</span>
+
+            </div>
+
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="pricing.html"
+                   class="active">
+                    Pricing
+                </a>
+            </li>
+
+            <li>
+                <a href="order.html">
+                    Order
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="portfolio.html">
+                    Portfolio
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <a href="order.html"
+           class="nav-button">
+
+            Get Started
+            <i class="fas fa-arrow-right"></i>
+
+        </a>
+
+
+        <button class="menu-btn"
+                id="menuBtn">
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="pricing-hero">
+
+    <span class="section-label">
+        SIMPLE & TRANSPARENT
+    </span>
+
+    <h1>
+        Our <span>Pricing</span>
+    </h1>
+
+    <p>
+        Affordable and transparent prices for our most
+        popular computer, printing, cyber and digital services.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRICE LIST
+===================================================== -->
+
+<section class="price-section">
+
+    <div class="price-container">
+
+
+        <!-- PRINTING -->
+
+        <div class="price-category">
+
+            <div class="price-category-title">
+
+                <i class="fas fa-print"></i>
+
+                <div>
+
+                    <h2>
+                        Printing & Photocopy
+                    </h2>
+
+                    <p>
+                        Quality document and photo printing.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="price-table-wrapper">
+
+                <div class="price-row header">
+
+                    <span>Service</span>
+
+                    <span>Unit</span>
+
+                    <strong>Price</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>Black & White Printing</span>
+
+                    <span>Per page</span>
+
+                    <strong>KSh 10</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>Colour Printing</span>
+
+                    <span>Per page</span>
+
+                    <strong>KSh 30</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>Photocopy</span>
+
+                    <span>Per page</span>
+
+                    <strong>KSh 5</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>Colour Photocopy</span>
+
+                    <span>Per page</span>
+
+                    <strong>KSh 20</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>Scanning</span>
+
+                    <span>Per page</span>
+
+                    <strong>KSh 20</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DOCUMENTS -->
+
+        <div class="price-category">
+
+            <div class="price-category-title">
+
+                <i class="fas fa-file-lines"></i>
+
+                <div>
+
+                    <h2>
+                        Document Services
+                    </h2>
+
+                    <p>
+                        Professional document preparation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="price-table-wrapper">
+
+                <div class="price-row header">
+
+                    <span>Service</span>
+
+                    <span>Unit</span>
+
+                    <strong>Price</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>Typing</span>
+
+                    <span>Per page</span>
+
+                    <strong>KSh 50</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>CV Creation</span>
+
+                    <span>Per CV</span>
+
+                    <strong>KSh 500</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>CV Editing</span>
+
+                    <span>Per CV</span>
+
+                    <strong>KSh 300</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>PDF Conversion</span>
+
+                    <span>Per document</span>
+
+                    <strong>KSh 100</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>Document Formatting</span>
+
+                    <span>Per document</span>
+
+                    <strong>KSh 200+</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DESIGN -->
+
+        <div class="price-category">
+
+            <div class="price-category-title">
+
+                <i class="fas fa-palette"></i>
+
+                <div>
+
+                    <h2>
+                        Graphic Design
+                    </h2>
+
+                    <p>
+                        Creative designs for your brand.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="price-table-wrapper">
+
+                <div class="price-row header">
+
+                    <span>Service</span>
+
+                    <span>Unit</span>
+
+                    <strong>Price</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>Poster Design</span>
+
+                    <span>Per design</span>
+
+                    <strong>KSh 500+</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>Business Card Design</span>
+
+                    <span>Per design</span>
+
+                    <strong>KSh 300+</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>Logo Design</span>
+
+                    <span>Per logo</span>
+
+                    <strong>KSh 1,000+</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>Sticker Design</span>
+
+                    <span>Per design</span>
+
+                    <strong>KSh 500+</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>Invitation Card</span>
+
+                    <span>Per design</span>
+
+                    <strong>KSh 500+</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- COMPUTER -->
+
+        <div class="price-category">
+
+            <div class="price-category-title">
+
+                <i class="fas fa-computer"></i>
+
+                <div>
+
+                    <h2>
+                        Computer Services
+                    </h2>
+
+                    <p>
+                        Computer installation and technical support.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="price-table-wrapper">
+
+                <div class="price-row header">
+
+                    <span>Service</span>
+
+                    <span>Unit</span>
+
+                    <strong>Price</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>Windows Installation</span>
+
+                    <span>Per PC</span>
+
+                    <strong>KSh 1,000</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>Software Installation</span>
+
+                    <span>Per PC</span>
+
+                    <strong>KSh 300+</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>Computer Troubleshooting</span>
+
+                    <span>Per PC</span>
+
+                    <strong>KSh 500+</strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>Computer Maintenance</span>
+
+                    <span>Per PC</span>
+
+                    <strong>KSh 500+</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRICE CALCULATOR
+===================================================== -->
+
+<section class="calculator-section">
+
+    <div class="calculator">
+
+        <div class="calculator-heading">
+
+            <span class="section-label">
+                QUICK CALCULATOR
+            </span>
+
+            <h2>
+                Calculate Your Cost
+            </h2>
+
+            <p>
+                Select a service and quantity to estimate
+                your total cost.
+            </p>
+
+        </div>
+
+
+        <form class="calculator-form"
+              id="priceCalculator">
+
+
+            <div class="form-group">
+
+                <label for="service">
+                    Select Service
+                </label>
+
+                <select id="service"
+                        required>
+
+                    <option value="">
+                        -- Select Service --
+                    </option>
+
+                    <option value="10">
+                        Black & White Printing - KSh 10
+                    </option>
+
+                    <option value="30">
+                        Colour Printing - KSh 30
+                    </option>
+
+                    <option value="5">
+                        Photocopy - KSh 5
+                    </option>
+
+                    <option value="20">
+                        Colour Photocopy - KSh 20
+                    </option>
+
+                    <option value="20">
+                        Scanning - KSh 20
+                    </option>
+
+                    <option value="50">
+                        Typing - KSh 50
+                    </option>
+
+                    <option value="500">
+                        CV Creation - KSh 500
+                    </option>
+
+                    <option value="500">
+                        Poster Design - KSh 500
+                    </option>
+
+                    <option value="300">
+                        Business Card Design - KSh 300
+                    </option>
+
+                    <option value="1000">
+                        Logo Design - KSh 1,000
+                    </option>
+
+                    <option value="1000">
+                        Windows Installation - KSh 1,000
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="quantity">
+                    Quantity
+                </label>
+
+                <input type="number"
+                       id="quantity"
+                       min="1"
+                       value="1"
+                       required>
+
+            </div>
+
+
+            <button type="submit"
+                    class="calculate-btn">
+
+                <i class="fas fa-calculator"></i>
+
+                Calculate Total
+
+            </button>
+
+        </form>
+
+
+        <div class="result-box"
+             id="resultBox">
+
+            <span>
+                Estimated Total
+            </span>
+
+            <strong class="total-price"
+                    id="totalPrice">
+
+                KSh 0
+
+            </strong>
+
+
+            <a href="order.html"
+               class="btn btn-light calculator-order">
+
+                Continue to Order
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="pricing-cta">
+
+    <h2>
+        Need a Custom Quote?
+    </h2>
+
+    <p>
+        Some projects require customized pricing.
+        Contact us for a personalized quotation.
+    </p>
+
+    <a href="contact.html"
+       class="btn btn-light">
+
+        Request a Quote
+        <i class="fas fa-arrow-right"></i>
+
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-about">
+
+            <div class="footer-logo">
+
+                <i class="fas fa-laptop-code"></i>
+
+                <div>
+
+                    <strong>ELVIS</strong>
+
+                    <span>TECH HUB</span>
+
+                </div>
+
+            </div>
+
+            <p>
+                Your trusted partner for computer services,
+                printing, cyber services, graphic design and
+                digital solutions.
+            </p>
+
+
+            <div class="social-links">
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="pricing.html">Pricing</a>
+
+            <a href="order.html">Order</a>
+
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Services</h3>
+
+            <a href="services.html">Printing</a>
+
+            <a href="services.html">Computer Services</a>
+
+            <a href="services.html">Graphic Design</a>
+
+            <a href="services.html">Cyber Services</a>
+
+            <a href="services.html">Web Development</a>
+
+        </div>
+
+
+        <div class="footer-column contact-column">
+
+            <h3>Contact Us</h3>
+
+            <p>
+                <i class="fas fa-phone"></i>
+                +254 727 374 133
+            </p>
+
+            <p>
+                <i class="fas fa-envelope"></i>
+                info@elvis-techhub.com
+            </p>
+
+            <p>
+                <i class="fas fa-location-dot"></i>
+                Kenya
+            </p>
+
+            <p>
+                <i class="fas fa-clock"></i>
+                Mon - Sat: 8:00 AM - 7:00 PM
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026
+            <strong>Elvis Tech Hub</strong>.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Designed & Developed by
+            <strong>Elvis Tech Hub</strong>
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- WHATSAPP -->
+
+<a href="https://wa.me/254727374133"
+   class="whatsapp-button"
+   target="_blank">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- BACK TO TOP -->
+
+<button id="backToTop"
+        class="back-to-top">
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+
+
+<script src="js/script.js"></script>
+
+
+<!-- =====================================================
+     PRICE CALCULATOR JAVASCRIPT
+===================================================== -->
+
+<script>
+
+    const calculator =
+        document.getElementById("priceCalculator");
+
+    const resultBox =
+        document.getElementById("resultBox");
+
+    const totalPrice =
+        document.getElementById("totalPrice");
+
+
+    calculator.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const service =
+            document.getElementById("service");
+
+        const quantity =
+            document.getElementById("quantity");
+
+
+        const price =
+            parseFloat(service.value);
+
+        const amount =
+            parseInt(quantity.value);
+
+
+        if (!price || amount < 1) {
+
+            alert("Please select a service and enter a valid quantity.");
+
+            return;
+
+        }
+
+
+        const total =
+            price * amount;
+
+
+        totalPrice.textContent =
+            "KSh " +
+            total.toLocaleString();
+
+
+        resultBox.classList.add("show");
+
+    });
+
+</script>
+
+
+</body>
+
+</html>

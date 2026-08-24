@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Professional computer, printing, cyber, graphic design and digital services from Elvis Tech Hub.">
+
+    <title>Services | Elvis Tech Hub</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =====================================================
+           SERVICES PAGE
+        ===================================================== */
+
+        .page-hero {
+            background:
+                linear-gradient(
+                    120deg,
+                    #071426,
+                    #0c315c
+                );
+
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .page-hero .section-label {
+            color: #00c6ff;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(40px, 6vw, 65px);
+            margin-bottom: 15px;
+        }
+
+        .page-hero h1 span {
+            color: #00c6ff;
+        }
+
+        .page-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #c8d5e3;
+            font-size: 17px;
+        }
+
+
+        /* SERVICE CATEGORIES */
+
+        .service-category {
+            margin-bottom: 70px;
+        }
+
+        .category-heading {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .category-heading i {
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(0, 102, 255, 0.1);
+            color: #0066ff;
+
+            border-radius: 12px;
+            font-size: 23px;
+        }
+
+        .category-heading h2 {
+            color: #08111f;
+            font-size: 28px;
+        }
+
+        .category-heading p {
+            color: #6b7785;
+            font-size: 14px;
+        }
+
+
+        /* SERVICE BOX */
+
+        .full-service-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .full-service-card {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 16px;
+
+            border: 1px solid #e3e8ef;
+
+            position: relative;
+
+            overflow: hidden;
+
+            transition: 0.3s ease;
+        }
+
+        .full-service-card::before {
+            content: "";
+
+            position: absolute;
+
+            width: 5px;
+            height: 0;
+
+            background: #0066ff;
+
+            left: 0;
+            top: 0;
+
+            transition: 0.3s ease;
+        }
+
+        .full-service-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 18px 40px
+                rgba(0,0,0,0.08);
+        }
+
+        .full-service-card:hover::before {
+            height: 100%;
+        }
+
+
+        .full-service-icon {
+            width: 65px;
+            height: 65px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background:
+                rgba(0,102,255,0.1);
+
+            color: #0066ff;
+
+            font-size: 27px;
+
+            margin-bottom: 20px;
+        }
+
+        .full-service-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .full-service-card p {
+            color: #596574;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            margin-bottom: 22px;
+        }
+
+        .service-list li {
+            color: #4d5866;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .service-list i {
+            color: #16a34a;
+            margin-right: 8px;
+        }
+
+        .service-order {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            color: #0066ff;
+
+            font-weight: bold;
+
+            font-size: 14px;
+        }
+
+        .service-order i {
+            transition: 0.3s ease;
+        }
+
+        .service-order:hover i {
+            transform: translateX(5px);
+        }
+
+
+        /* CTA */
+
+        .services-cta {
+            background: #0066ff;
+            color: white;
+
+            text-align: center;
+
+            padding: 80px 20px;
+        }
+
+        .services-cta h2 {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .services-cta p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: #dce9ff;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .full-service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .page-hero {
+                padding: 75px 20px;
+            }
+
+            .full-service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-cta h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+
+    <div class="top-container">
+
+        <div class="top-left">
+
+            <span>
+                <i class="fas fa-phone"></i>
+                +254 727 374 133
+            </span>
+
+            <span>
+                <i class="fas fa-envelope"></i>
+                info@elvis-techhub.com
+            </span>
+
+        </div>
+
+
+        <div class="top-right">
+
+            <a href="#">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-icon">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+
+            <div class="logo-text">
+
+                <h2>ELVIS</h2>
+
+                <span>TECH HUB</span>
+
+            </div>
+
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html"
+                   class="active">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="pricing.html">
+                    Pricing
+                </a>
+            </li>
+
+            <li>
+                <a href="order.html">
+                    Order
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="portfolio.html">
+                    Portfolio
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <a href="order.html"
+           class="nav-button">
+
+            Get Started
+            <i class="fas fa-arrow-right"></i>
+
+        </a>
+
+
+        <button class="menu-btn"
+                id="menuBtn">
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE HERO
+===================================================== -->
+
+<section class="page-hero">
+
+    <span class="section-label">
+        WHAT WE DO
+    </span>
+
+    <h1>
+        Our <span>Professional Services</span>
+    </h1>
+
+    <p>
+        Discover reliable, affordable and professional
+        technology solutions designed for students,
+        individuals, businesses and organizations.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section>
+
+    <div class="section-container">
+
+
+        <!-- =============================================
+             COMPUTER SERVICES
+        ============================================== -->
+
+        <div class="service-category">
+
+            <div class="category-heading">
+
+                <i class="fas fa-computer"></i>
+
+                <div>
+
+                    <h2>
+                        Computer Services
+                    </h2>
+
+                    <p>
+                        Reliable computer support and maintenance.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="full-service-grid">
+
+
+                <div class="full-service-card">
+
+                    <div class="full-service-icon">
+                        <i class="fas fa-windows"></i>
+                    </div>
+
+                    <h3>
+                        Windows Installation
+                    </h3>
+
+                    <p>
+                        Professional Windows installation,
+                        setup and configuration.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Windows Installation
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Driver Installation
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            System Configuration
+                        </li>
+
+                    </ul>
+
+                    <a href="order.html"
+                       class="service-order">
+
+                        Order Service
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="full-service-card">
+
+                    <div class="full-service-icon">
+                        <i class="fas fa-screwdriver-wrench"></i>
+                    </div>
+
+                    <h3>
+                        Computer Repair
+                    </h3>
+
+                    <p>
+                        Troubleshooting and repair for
+                        common computer problems.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Hardware Troubleshooting
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Software Problems
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            System Optimization
+                        </li>
+
+                    </ul>
+
+                    <a href="order.html"
+                       class="service-order">
+
+                        Order Service
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="full-service-card">
+
+                    <div class="full-service-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+
+                    <h3>
+                        Software Installation
+                    </h3>
+
+                    <p>
+                        Installation and configuration of
+                        essential computer software.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Application Installation
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Software Configuration
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Updates
+                        </li>
+
+                    </ul>
+
+                    <a href="order.html"
+                       class="service-order">
+
+                        Order Service
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             PRINTING
+        ============================================== -->
+
+        <div class="service-category">
+
+            <div class="category-heading">
+
+                <i class="fas fa-print"></i>
+
+                <div>
+
+                    <h2>
+                        Printing & Document Services
+                    </h2>
+
+                    <p>
+                        Fast and high-quality document services.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="full-service-grid">
+
+
+                <div class="full-service-card">
+
+                    <div class="full-service-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+
+                    <h3>
+                        Printing
+                    </h3>
+
+                    <p>
+                        Black & white and colour printing
+                        for documents and photos.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Colour Printing
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Black & White Printing
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Photo Printing
+                        </li>
+
+                    </ul>
+
+                    <a href="order.html"
+                       class="service-order">
+
+                        Order Printing
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="full-service-card">
+
+                    <div class="full-service-icon">
+                        <i class="fas fa-copy"></i>
+                    </div>
+
+                    <h3>
+                        Photocopying
+                    </h3>
+
+                    <p>
+                        Clear and professional photocopying
+                        for documents of different sizes.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            A4 Documents
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            A3 Documents
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Multiple Copies
+                        </li>
+
+                    </ul>
+
+                    <a href="order.html"
+                       class="service-order">
+
+                        Order Service
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="full-service-card">
+
+                    <div class="full-service-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+
+                    <h3>
+                        Scanning & PDF
+                    </h3>
+
+                    <p>
+                        Scan documents and convert them into
+                        professional digital files.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Document Scanning
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            PDF Conversion
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            File Organization
+                        </li>
+
+                    </ul>
+
+                    <a href="order.html"
+                       class="service-order">
+
+                        Order Service
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             GRAPHIC DESIGN
+        ============================================== -->
+
+        <div class="service-category">
+
+            <div class="category-heading">
+
+                <i class="fas fa-palette"></i>
+
+                <div>
+
+                    <h2>
+                        Graphic Design
+                    </h2>
+
+                    <p>
+                        Creative designs for personal and business needs.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="full-service-grid">
+
+
+                <div class="full-service-card">
+
+                    <div class="full-service-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+
+                    <h3>
+                        Posters & Advertisements
+                    </h3>
+
+                    <p>
+                        Eye-catching promotional posters for
+                        businesses, events and organizations.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Business Posters
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Event Posters
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Social Media Designs
+                        </li>
+
+                    </ul>
+
+                    <a href="order.html"
+                       class="service-order">
+
+                        Request Design
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="full-service-card">
+
+                    <div class="full-service-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+
+                    <h3>
+                        Business Cards
+                    </h3>
+
+                    <p>
+                        Professional business cards that
+                        represent your brand.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Custom Design
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Professional Layout
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Print Ready Files
+                        </li>
+
+                    </ul>
+
+                    <a href="order.html"
+                       class="service-order">
+
+                        Request Design
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="full-service-card">
+
+                    <div class="full-service-icon">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+
+                    <h3>
+                        Logo Design
+                    </h3>
+
+                    <p>
+                        Unique logos designed to give your
+                        business a professional identity.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Custom Concepts
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Business Branding
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Digital Files
+                        </li>
+
+                    </ul>
+
+                    <a href="order.html"
+                       class="service-order">
+
+                        Request Design
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             CYBER SERVICES
+        ============================================== -->
+
+        <div class="service-category">
+
+            <div class="category-heading">
+
+                <i class="fas fa-globe"></i>
+
+                <div>
+
+                    <h2>
+                        Cyber & Online Services
+                    </h2>
+
+                    <p>
+                        Assistance with online and digital tasks.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="full-service-grid">
+
+
+                <div class="full-service-card">
+
+                    <div class="full-service-icon">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+
+                    <h3>
+                        Online Applications
+                    </h3>
+
+                    <p>
+                        Assistance with online applications,
+                        registrations and digital forms.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Online Forms
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Account Assistance
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Document Uploads
+                        </li>
+
+                    </ul>
+
+                    <a href="order.html"
+                       class="service-order">
+
+                        Request Service
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="full-service-card">
+
+                    <div class="full-service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+
+                    <h3>
+                        CV & Resume Services
+                    </h3>
+
+                    <p>
+                        Professional CV creation, editing
+                        and formatting.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            CV Creation
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            CV Editing
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Professional Formatting
+                        </li>
+
+                    </ul>
+
+                    <a href="order.html"
+                       class="service-order">
+
+                        Create CV
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="full-service-card">
+
+                    <div class="full-service-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+
+                    <h3>
+                        Passport Photos
+                    </h3>
+
+                    <p>
+                        Professional passport and ID photo
+                        preparation and printing.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Photo Editing
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Background Adjustment
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Passport Size
+                        </li>
+
+                    </ul>
+
+                    <a href="order.html"
+                       class="service-order">
+
+                        Request Service
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             WEB DEVELOPMENT
+        ============================================== -->
+
+        <div class="service-category">
+
+            <div class="category-heading">
+
+                <i class="fas fa-code"></i>
+
+                <div>
+
+                    <h2>
+                        Web & Digital Development
+                    </h2>
+
+                    <p>
+                        Modern websites and digital solutions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="full-service-grid">
+
+
+                <div class="full-service-card">
+
+                    <div class="full-service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+
+                    <h3>
+                        Website Development
+                    </h3>
+
+                    <p>
+                        Responsive websites for businesses,
+                        portfolios, schools and organizations.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            HTML & CSS
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            JavaScript
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Mobile Responsive
+                        </li>
+
+                    </ul>
+
+                    <a href="order.html"
+                       class="service-order">
+
+                        Build a Website
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="full-service-card">
+
+                    <div class="full-service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+
+                    <h3>
+                        Business Websites
+                    </h3>
+
+                    <p>
+                        Professional online presence for
+                        businesses and organizations.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Business Pages
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Contact Forms
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Online Portfolio
+                        </li>
+
+                    </ul>
+
+                    <a href="order.html"
+                       class="service-order">
+
+                        Start Project
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="full-service-card">
+
+                    <div class="full-service-icon">
+                        <i class="fas fa-mobile-screen"></i>
+                    </div>
+
+                    <h3>
+                        Responsive Design
+                    </h3>
+
+                    <p>
+                        Websites optimized for phones,
+                        tablets and desktop computers.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Mobile Friendly
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Tablet Support
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Desktop Support
+                        </li>
+
+                    </ul>
+
+                    <a href="order.html"
+                       class="service-order">
+
+                        Start Project
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="services-cta">
+
+    <h2>
+        Need One of Our Services?
+    </h2>
+
+    <p>
+        Tell us what you need and we'll help you get it done
+        professionally and efficiently.
+    </p>
+
+    <a href="order.html"
+       class="btn btn-light">
+
+        Place Your Order
+        <i class="fas fa-arrow-right"></i>
+
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-about">
+
+            <div class="footer-logo">
+
+                <i class="fas fa-laptop-code"></i>
+
+                <div>
+
+                    <strong>ELVIS</strong>
+
+                    <span>TECH HUB</span>
+
+                </div>
+
+            </div>
+
+            <p>
+                Your trusted partner for computer services,
+                printing, cyber services, graphic design and
+                digital solutions.
+            </p>
+
+
+            <div class="social-links">
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About Us</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="pricing.html">Pricing</a>
+
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Services</h3>
+
+            <a href="services.html">
+                Printing
+            </a>
+
+            <a href="services.html">
+                Computer Services
+            </a>
+
+            <a href="services.html">
+                Graphic Design
+            </a>
+
+            <a href="services.html">
+                Cyber Services
+            </a>
+
+            <a href="services.html">
+                Web Development
+            </a>
+
+        </div>
+
+
+        <div class="footer-column contact-column">
+
+            <h3>Contact Us</h3>
+
+            <p>
+                <i class="fas fa-phone"></i>
+                +254 727 374 133
+            </p>
+
+            <p>
+                <i class="fas fa-envelope"></i>
+                info@elvis-techhub.com
+            </p>
+
+            <p>
+                <i class="fas fa-location-dot"></i>
+                Kenya
+            </p>
+
+            <p>
+                <i class="fas fa-clock"></i>
+                Mon - Sat: 8:00 AM - 7:00 PM
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026
+            <strong>Elvis Tech Hub</strong>.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Designed & Developed by
+            <strong>Elvis Tech Hub</strong>
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
+
+<a href="https://wa.me/254727374133"
+   class="whatsapp-button"
+   target="_blank"
+   title="Chat with us on WhatsApp">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<button id="backToTop"
+        class="back-to-top">
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
